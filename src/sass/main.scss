@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+$color-white: #fff;
+$color-grey: #555559;
+$color-darkgrey: #2e2e2e;
+$color-lightgrey: #efefef;
+$color-lightergrey: #fbfafa;
+$color-shadow-grey: #efeeee;
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+p, h1 {
+  font-weight: 300;
+}
+
+h3 {
+  font-weight: 700;
+  color: $color-grey;
+}
+
+a {
+  font-weight: 600;
+  color: $color-white;
+}
+
+.menu-container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0px 3px 8px $color-shadow-grey;
+  a {
+    text-transform: uppercase;
+    color: $color-darkgrey;
+    text-decoration: none;
+
+    &:nth-child(odd) {
+      padding: 0 50px;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.grid-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p, h3 {
+    width: 60%;
+  }
+
+  h3 {
+    font-size: 24px;
+    position: relative;
+    margin: 0;
+
+    &:before {
+      content: '__';
+      position: absolute;
+      bottom: 35%;
+      left: -35px;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.grid-section, .footer {
+  color: $color-grey;
+}
+
+.hero-section {
+  background-image: url('../assets/images/hotdogs.png');
+  height: 480px;
+  &__top-shader {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+    height: 80px;
+  }
+  &__instagram {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px 15px 0 0;
+    color: $color-white;
+  }
+  span {
+    vertical-align: top;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $color-lightgrey;
+  height: 75px;
+  padding: 0 20px;
+  font-size: 14px;
+  ul {
+    list-style-type: none;
+    display: flex;
+
+    li:first-child, li:nth-child(2) {
+      padding-right: 10px;
+
+      &:after {
+        content: '|';
+        display: inline;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+.summary {
+  background-color: $color-lightergrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  h1 {
+    font-size: 55.94px;
+    margin: 0;
+    width: 80%;
+  }
+
+  a {
+    background-color: #286782;
+    padding: 30px 50px;
+    border-radius: 10px;
+    margin: 80px 0 174px 0;
+    font-size: 20px;
+  }
+
+  img {
+    margin-top: 169px;
+  }
+}
