@@ -14,6 +14,7 @@ export default class App extends Component {
   render() {
     return(
       <div>
+        {CONST_1} {CONST_2} {CONST_3}
         <HeroSection />
         <MenuContainer />
         <Summary />
